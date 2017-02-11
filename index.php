@@ -63,23 +63,25 @@ $mysqli->close();
       <div class="carousel-inner">
         <div class="item active" style="background-image: url(images/slider/1.jpg)">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig">Welcome to <span>Oxygen</span></h1>
-            <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
+            <h1 class="animated fadeInLeftBig">&nbsp;</h1>
+            <p class="animated fadeInRightBig">&nbsp;</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">เข้าสู่หน้าหลัก</a>
           </div>
         </div>
         <div class="item" style="background-image: url(images/slider/2.jpg)">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig">Say Hello to <span>Oxygen</span></h1>
-            <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
+            <h1 class="animated fadeInLeftBig">&nbsp;</h1>
+            <p class="animated fadeInRightBig">&nbsp;</p>
+            <p class="animated fadeInRightBig">&nbsp;</p>
+            <p class="animated fadeInRightBig">&nbsp;</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">เข้าสู่หน้าหลัก</a>
           </div>
         </div>
         <div class="item" style="background-image: url(images/slider/3.jpg)">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig">We are <span>Creative</span></h1>
-            <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
+            <h1 class="animated fadeInLeftBig">โรงเรียนทุ่งกุลาประชานุสรณ์ <span>สังกัด อบจ.ร้อยเอ็ด</span></h1>
+            <p class="animated fadeInRightBig">ยินดีต้อนรับ</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">เข้าสู่หน้าหลัก</a>
           </div>
         </div>
       </div>
@@ -104,13 +106,13 @@ $mysqli->close();
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll active"><a href="#home">Home</a></li>
-            <li class="scroll"><a href="#services">Service</a></li> 
-            <li class="scroll"><a href="#about-us">About Us</a></li>                     
-            <li class="scroll"><a href="#portfolio">Portfolio</a></li>
-            <li class="scroll"><a href="#team">Team</a></li>
-            <li class="scroll"><a href="#blog">Blog</a></li>
-            <li class="scroll"><a href="#contact">Contact</a></li>       
+            <li class="scroll active"><a href="#home">หน้าหลัก</a></li>
+            <li class="scroll"><a href="#services">ข่าวประชาสัมพันธ์</a></li> 
+            <li class="scroll"><a href="#about-us">เกี่ยวกับโรงเรียน</a></li>                     
+            <li class="scroll"><a href="#portfolio">กิจกรรม</a></li>
+            <li class="scroll"><a href="#team">บุคลากร</a></li>
+            <li class="scroll"><a href="#blog">ลิงค์น่าสนใจ</a></li>
+            <li class="scroll"><a href="#contact">การติดต่อ</a></li>       
           </ul>
         </div>
       </div>
@@ -818,10 +820,10 @@ $mysqli->close();
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <p>&copy; 2016 Oxygen Theme.</p>
+            <p>&copy; 2017 โรงเรียนทุ่งกุลาประชานุสรณ์ สังกัดองค์การบริหารส่วนจังหวัดร้อยเอ็ด</p>
           </div>
           <div class="col-sm-6">
-            <p class="pull-right">Crafted by <a href="http://designscrazed.org/">Allie</a></p>
+            <p class="pull-right">By <a href="https://www.facebook.com/bombomstory/" target="_blank">Paitoon Thipsanthia</a></p>
           </div>
         </div>
       </div>
