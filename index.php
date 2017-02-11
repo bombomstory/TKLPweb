@@ -34,7 +34,7 @@ $mysqli->close();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Oxygen - One Page HTML Template | Themeum</title>
+  <title>-:- โรงเรียนทุ่งกุลาประชานุสรณ์-องค์การบริหารส่วนจังหวัดร้อยเอ็ด -:-</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/animate.min.css" rel="stylesheet"> 
   <link href="css/font-awesome.min.css" rel="stylesheet">
