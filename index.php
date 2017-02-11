@@ -1,9 +1,5 @@
 <?php
 require_once("../moodle/config.php");
-
-print_r($CFG);
-echo "<hr><br>";
-
 $mysqli = @new mysqli($CFG->dbhost, $CFG->dbuser, $CFG->dbpass, $CFG->dbname);
 if(mysqli_connect_error()) {
     die('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
@@ -11,16 +7,23 @@ if(mysqli_connect_error()) {
 }
 if(!$mysqli->set_charset("UTF8")) { // เปลี่ยน charset เป้น utf8 พร้อมตรวจสอบการเปลี่ยน
     printf("Error loading character set utf8: %sn", $mysqli->error);  // ถ้าเปลี่ยนไม่ได้
-}else{
-    printf("Current character set: %sn", $mysqli->character_set_name()); // ถ้าเปลี่ยนได้
 }
+
+// echo $mysqli->character_set_name();  // แสดง charset เอา comment ออก
+// echo 'Success... ' . $mysqli->host_info . "n";
+
 $sql="select * from ".$CFG->prefix."course where 1=1";
 $result = $mysqli->query($sql); // ทำการ query คำสั่ง sql 
-$total=$result->num_rows;  // นับจำนวนถวที่แสดง ทั้งหมด
-echo "<br /><b>จำนวนรายวิชาทั้งหมด = ".$total." วิชา<b><br />";
+$subject_total=$result->num_rows;  // นับจำนวนถวที่แสดง ทั้งหมด
 
-echo $mysqli->character_set_name();  // แสดง charset เอา comment ออก
-echo 'Success... ' . $mysqli->host_info . "n";
+$sql="select * from ".$CFG->prefix."user a, ".$CFG->prefix."role_assignments b where a.id=b.userid and roleid=5";
+$result = $mysqli->query($sql); // ทำการ query คำสั่ง sql 
+$student_total=$result->num_rows;  // นับจำนวนถวที่แสดง ทั้งหมด
+
+$sql="select * from ".$CFG->prefix."user a, ".$CFG->prefix."role_assignments b where a.id=b.userid and roleid=3";
+$result = $mysqli->query($sql); // ทำการ query คำสั่ง sql 
+$staff_total=$result->num_rows;  // นับจำนวนถวที่แสดง ทั้งหมด
+
 $mysqli->close();
 
 ?>
