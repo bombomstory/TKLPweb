@@ -20,7 +20,7 @@ $sql="select * from ".$CFG->prefix."user a, ".$CFG->prefix."role_assignments b w
 $result = $mysqli->query($sql); // ทำการ query คำสั่ง sql 
 $student_total=$result->num_rows;  // นับจำนวนถวที่แสดง ทั้งหมด
 
-$sql="select * from ".$CFG->prefix."user a, ".$CFG->prefix."role_assignments b where a.id=b.userid and roleid=3";
+$sql="select * from ".$CFG->prefix."user a, ".$CFG->prefix."role_assignments b where a.id=b.userid and (roleid between 1 and 3)";
 $result = $mysqli->query($sql); // ทำการ query คำสั่ง sql 
 $staff_total=$result->num_rows;  // นับจำนวนถวที่แสดง ทั้งหมด
 
@@ -521,23 +521,23 @@ $mysqli->close();
       <div class="row count">
         <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
           <i class="fa fa-user"></i>
-          <h3 class="timer">4000</h3>
-          <p>Happy Clients</p>
+          <h3 class="timer"><?php echo $student_total; ?></h3>
+          <p>จำนวนนักเรียนทั้งหมด</p>
         </div>
         <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
           <i class="fa fa-desktop"></i>
-          <h3 class="timer">200</h3>                    
-          <p>Modern Websites</p>
+          <h3 class="timer"><?php echo $subject_total; ?></h3>                    
+          <p>จำนวนรายวิชาทั้งหมด</p>
         </div> 
         <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="700ms">
           <i class="fa fa-trophy"></i>
           <h3 class="timer">10</h3>                    
-          <p>WINNING AWARDS</p>
+          <p>รางวัลที่ภาคภูมิใจ</p>
         </div> 
         <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="900ms">
-          <i class="fa fa-comment-o"></i>                    
-          <h3>24/7</h3>
-          <p>Fast Support</p>
+          <i class="fa fa-user"></i>                    
+          <h3><?php echo $staff_total; ?></h3>
+          <p>จำนวนบุคลากรทั้งหมด</p>
         </div>                 
       </div>
     </div>
