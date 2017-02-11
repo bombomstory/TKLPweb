@@ -98,7 +98,7 @@ $mysqli->close();
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="index.php">
             <h1><img class="img-responsive" src="images/logo.png" alt="logo"></h1>
           </a>                    
         </div>
@@ -252,7 +252,7 @@ $mysqli->close();
                     <p>Design, Photography</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.php" ><i class="fa fa-link"></i></a></span>
                     <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
                   </div>
                 </div>
@@ -273,7 +273,7 @@ $mysqli->close();
                     <p>Design, Photography</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.php" ><i class="fa fa-link"></i></a></span>
                     <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
                   </div>
                 </div>
@@ -294,7 +294,7 @@ $mysqli->close();
                     <p>Design, Photography</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.php" ><i class="fa fa-link"></i></a></span>
                     <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
                   </div>
                 </div>
@@ -315,7 +315,7 @@ $mysqli->close();
                     <p>Design, Photography</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.php" ><i class="fa fa-link"></i></a></span>
                     <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
                   </div>
                 </div>
@@ -336,7 +336,7 @@ $mysqli->close();
                     <p>Design, Photography</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.php" ><i class="fa fa-link"></i></a></span>
                     <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
                   </div>
                 </div>
@@ -357,7 +357,7 @@ $mysqli->close();
                     <p>Design, Photography</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.php" ><i class="fa fa-link"></i></a></span>
                     <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
                   </div>
                 </div>
@@ -378,7 +378,7 @@ $mysqli->close();
                     <p>Design, Photography</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.php" ><i class="fa fa-link"></i></a></span>
                     <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
                   </div>
                 </div>
@@ -399,7 +399,7 @@ $mysqli->close();
                     <p>Design, Photography</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.php" ><i class="fa fa-link"></i></a></span>
                     <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
                   </div>
                 </div>
@@ -800,7 +800,7 @@ $mysqli->close();
     <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
       <div class="container text-center">
         <div class="footer-logo">
-          <a href="index.html"><img class="img-responsive" src="images/logo.png" alt=""></a>
+          <a href="index.php"><img class="img-responsive" src="images/logo.png" alt=""></a>
         </div>
         <div class="social-icons">
           <ul>
