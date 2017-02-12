@@ -82,6 +82,8 @@ $mysqli->close();
             <h1 class="animated fadeInLeftBig">&nbsp;</h1>
             <p class="animated fadeInRightBig">&nbsp;</p>
             <p class="animated fadeInRightBig">&nbsp;</p>
+            <p class="animated fadeInRightBig">&nbsp;</p>
+            <p class="animated fadeInRightBig">&nbsp;</p>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">เข้าสู่หน้าหลัก</a>
           </div>
         </div>
