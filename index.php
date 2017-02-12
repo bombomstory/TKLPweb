@@ -64,7 +64,7 @@ $mysqli->close();
         <div class="item active" style="background-image: url(images/slider/1.jpg)">
           <div class="caption">
             <h1 class="animated fadeInLeftBig">&nbsp;</h1>
-            <p class="animated fadeInRightBig">&nbsp;</p>
+            <p class="animated fadeInRightBig"></p>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">เข้าสู่หน้าหลัก</a>
           </div>
         </div>
@@ -80,10 +80,52 @@ $mysqli->close();
         <div class="item" style="background-image: url(images/slider/3.jpg)">
           <div class="caption">
             <h1 class="animated fadeInLeftBig">โรงเรียนทุ่งกุลาประชานุสรณ์ <span>สังกัด อบจ.ร้อยเอ็ด</span></h1>
-            <p class="animated fadeInRightBig">ยินดีต้อนรับ</p>
+            <p class="animated fadeInRightBig">&nbsp;</p>
+            <p class="animated fadeInRightBig">&nbsp;</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">ยินดีต้อนรับ เข้าสู่หน้าหลัก</a>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(images/slider/4.jpg)">
+          <div class="caption">
+            <h1 class="animated fadeInLeftBig">&nbsp;</h1>
+            <p class="animated fadeInRightBig">&nbsp;</p>
+            <p class="animated fadeInRightBig">&nbsp;</p>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">เข้าสู่หน้าหลัก</a>
           </div>
         </div>
+        <div class="item" style="background-image: url(images/slider/5.png)">
+          <div class="caption">
+            <h1 class="animated fadeInLeftBig">โรงเรียนทุ่งกุลาประชานุสรณ์ <span>สังกัด อบจ.ร้อยเอ็ด</span></h1>
+            <p class="animated fadeInRightBig">&nbsp;</p>
+            <p class="animated fadeInRightBig">&nbsp;</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">ยินดีต้อนรับ เข้าสู่หน้าหลัก</a>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(images/slider/6.png)">
+          <div class="caption">
+            <h1 class="animated fadeInLeftBig">โรงเรียนทุ่งกุลาประชานุสรณ์ <span>สังกัด อบจ.ร้อยเอ็ด</span></h1>
+            <p class="animated fadeInRightBig">&nbsp;</p>
+            <p class="animated fadeInRightBig">&nbsp;</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">ยินดีต้อนรับ เข้าสู่หน้าหลัก</a>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(images/slider/7.png)">
+          <div class="caption">
+            <h1 class="animated fadeInLeftBig">โรงเรียนทุ่งกุลาประชานุสรณ์ <span>สังกัด อบจ.ร้อยเอ็ด</span></h1>
+            <p class="animated fadeInRightBig">&nbsp;</p>
+            <p class="animated fadeInRightBig">&nbsp;</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">ยินดีต้อนรับ เข้าสู่หน้าหลัก</a>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(images/slider/8.png)">
+          <div class="caption">
+            <h1 class="animated fadeInLeftBig">โรงเรียนทุ่งกุลาประชานุสรณ์ <span>สังกัด อบจ.ร้อยเอ็ด</span></h1>
+            <p class="animated fadeInRightBig">&nbsp;</p>
+            <p class="animated fadeInRightBig">&nbsp;</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">ยินดีต้อนรับ เข้าสู่หน้าหลัก</a>
+          </div>
+        </div>                        
+
       </div>
       <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
       <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
