@@ -85,7 +85,7 @@ $mysqli->close();
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">ยินดีต้อนรับ เข้าสู่หน้าหลัก</a>
           </div>
         </div>
-        <div class="item" style="background-image: url(images/slider/4.jpg)">
+        <div class="item" style="background-image: url(images/slider/4.png)">
           <div class="caption">
             <h1 class="animated fadeInLeftBig">&nbsp;</h1>
             <p class="animated fadeInRightBig">&nbsp;</p>
