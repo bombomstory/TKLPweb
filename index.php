@@ -77,7 +77,7 @@ $mysqli->close();
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">เข้าสู่หน้าหลัก</a>
           </div>
         </div>
-        <div class="item" style="background-image: url(images/slider/3.jpg)">
+        <div class="item" style="background-image: url(images/slider/3.png)">
           <div class="caption">
             <h1 class="animated fadeInLeftBig">โรงเรียนทุ่งกุลาประชานุสรณ์ <span>สังกัด อบจ.ร้อยเอ็ด</span></h1>
             <p class="animated fadeInRightBig">&nbsp;</p>
