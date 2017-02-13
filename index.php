@@ -5,11 +5,13 @@ if (mysqli_connect_error()) {
     die('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
     exit;
 }
-if (!$mysqli->set_charset("UTF8")) { // เปลี่ยน charset เป้น utf8 พร้อมตรวจสอบการเปลี่ยน
-    printf("Error loading character set utf8: %sn", $mysqli->error);  // ถ้าเปลี่ยนไม่ได้
+// เปลี่ยน charset เป้น utf8 พร้อมตรวจสอบการเปลี่ยน
+if (!$mysqli->set_charset("UTF8")) {
+    // แสดงข้อความถ้้าด้านล่างเปลี่ยนไม่ได้
+    printf("Error loading character set utf8: %sn", $mysqli->error);
 }
-
-// echo $mysqli->character_set_name();  // แสดง charset เอา comment ออก
+// แสดง charset เอา comment ออก
+// echo $mysqli->character_set_name(); 
 // echo 'Success... ' . $mysqli->host_info . "n";
 
 $sql="select * from ".$CFG->prefix."course where 1=1";
