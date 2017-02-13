@@ -1,11 +1,11 @@
 <?php
 require_once("../moodle/config.php");
 $mysqli = @new mysqli($CFG->dbhost, $CFG->dbuser, $CFG->dbpass, $CFG->dbname);
-if(mysqli_connect_error()) {
+if (mysqli_connect_error()) {
     die('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
     exit;
 }
-if(!$mysqli->set_charset("UTF8")) { // เปลี่ยน charset เป้น utf8 พร้อมตรวจสอบการเปลี่ยน
+if (!$mysqli->set_charset("UTF8")) { // เปลี่ยน charset เป้น utf8 พร้อมตรวจสอบการเปลี่ยน
     printf("Error loading character set utf8: %sn", $mysqli->error);  // ถ้าเปลี่ยนไม่ได้
 }
 
@@ -13,16 +13,22 @@ if(!$mysqli->set_charset("UTF8")) { // เปลี่ยน charset เป้�
 // echo 'Success... ' . $mysqli->host_info . "n";
 
 $sql="select * from ".$CFG->prefix."course where 1=1";
-$result = $mysqli->query($sql); // ทำการ query คำสั่ง sql 
-$subject_total=$result->num_rows;  // นับจำนวนถวที่แสดง ทั้งหมด
+// ทำการ query คำสั่ง sql
+$result = $mysqli->query($sql);
+// นับจำนวนถวที่แสดง ทั้งหมด
+$subject_total=$result->num_rows;
 
 $sql="select * from ".$CFG->prefix."user a, ".$CFG->prefix."role_assignments b where a.id=b.userid and roleid=5";
-$result = $mysqli->query($sql); // ทำการ query คำสั่ง sql 
-$student_total=$result->num_rows;  // นับจำนวนถวที่แสดง ทั้งหมด
+// ทำการ query คำสั่ง sql 
+$result = $mysqli->query($sql);
+// นับจำนวนถวที่แสดง ทั้งหมด
+$student_total=$result->num_rows;
 
 $sql="select * from ".$CFG->prefix."user a, ".$CFG->prefix."role_assignments b where a.id=b.userid and (roleid between 1 and 3)";
-$result = $mysqli->query($sql); // ทำการ query คำสั่ง sql 
-$staff_total=$result->num_rows;  // นับจำนวนถวที่แสดง ทั้งหมด
+// ทำการ query คำสั่ง sql 
+$result = $mysqli->query($sql);
+// นับจำนวนถวที่แสดง ทั้งหมด 
+$staff_total=$result->num_rows;
 
 $mysqli->close();
 
@@ -64,8 +70,7 @@ $mysqli->close();
         <div class="item active" style="background-image: url(images/slider/1.jpg)">
           <div class="caption">
             <h1 class="animated fadeInLeftBig">&nbsp;</h1>
-            <p class="animated fadeInRightBig"></p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">เข้าสู่หน้าหลัก</a>
+            <p class="animated fadeInRightBig"></p><a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">เข้าสู่หน้าหลัก</a>
           </div>
         </div>
         <div class="item" style="background-image: url(images/slider/2.jpg)">
@@ -73,8 +78,7 @@ $mysqli->close();
             <h1 class="animated fadeInLeftBig">&nbsp;</h1>
             <p class="animated fadeInRightBig">&nbsp;</p>
             <p class="animated fadeInRightBig">&nbsp;</p>
-            <p class="animated fadeInRightBig">&nbsp;</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">เข้าสู่หน้าหลัก</a>
+            <p class="animated fadeInRightBig">&nbsp;</p><a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">เข้าสู่หน้าหลัก</a>
           </div>
         </div>
         <div class="item" style="background-image: url(images/slider/3.png)">
@@ -84,7 +88,8 @@ $mysqli->close();
             <p class="animated fadeInRightBig">&nbsp;</p>
             <p class="animated fadeInRightBig">&nbsp;</p>
             <p class="animated fadeInRightBig">&nbsp;</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">เข้าสู่หน้าหลัก</a>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">
+              เข้าสู่หน้าหลัก</a>
           </div>
         </div>
         <div class="item" style="background-image: url(images/slider/4.png)">
@@ -94,7 +99,8 @@ $mysqli->close();
             <p class="animated fadeInRightBig">&nbsp;</p>
             <p class="animated fadeInRightBig">&nbsp;</p>
             <p class="animated fadeInRightBig">&nbsp;</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">เข้าสู่หน้าหลัก</a>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">
+              เข้าสู่หน้าหลัก</a>
           </div>
         </div>
         <div class="item" style="background-image: url(images/slider/5.png)">
@@ -104,7 +110,8 @@ $mysqli->close();
             <p class="animated fadeInRightBig">&nbsp;</p>
             <p class="animated fadeInRightBig">&nbsp;</p>
             <p class="animated fadeInRightBig">&nbsp;</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">เข้าสู่หน้าหลัก</a>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">
+              เข้าสู่หน้าหลัก</a>
           </div>
         </div>
         <div class="item" style="background-image: url(images/slider/6.png)">
@@ -114,7 +121,8 @@ $mysqli->close();
             <p class="animated fadeInRightBig">&nbsp;</p>
             <p class="animated fadeInRightBig">&nbsp;</p>
             <p class="animated fadeInRightBig">&nbsp;</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">เข้าสู่หน้าหลัก</a>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">
+              เข้าสู่หน้าหลัก</a>
           </div>
         </div>
         <div class="item" style="background-image: url(images/slider/7.png)">
@@ -124,7 +132,8 @@ $mysqli->close();
             <p class="animated fadeInRightBig">&nbsp;</p>
             <p class="animated fadeInRightBig">&nbsp;</p>
             <p class="animated fadeInRightBig">&nbsp;</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">เข้าสู่หน้าหลัก</a>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">
+              เข้าสู่หน้าหลัก</a>
           </div>
         </div>
         <div class="item" style="background-image: url(images/slider/8.png)">
@@ -134,7 +143,8 @@ $mysqli->close();
             <p class="animated fadeInRightBig">&nbsp;</p>
             <p class="animated fadeInRightBig">&nbsp;</p>
             <p class="animated fadeInRightBig">&nbsp;</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">เข้าสู่หน้าหลัก</a>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">
+              เข้าสู่หน้าหลัก</a>
           </div>
         </div>                        
 
@@ -160,13 +170,20 @@ $mysqli->close();
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll active"><a href="#home">หน้าหลัก</a></li>
-            <li class="scroll"><a href="#services">ข่าวประชาสัมพันธ์</a></li> 
-            <li class="scroll"><a href="#about-us">เกี่ยวกับโรงเรียน</a></li>                     
-            <li class="scroll"><a href="#portfolio">กิจกรรม</a></li>
-            <li class="scroll"><a href="#team">บุคลากร</a></li>
-            <li class="scroll"><a href="#blog">ลิงค์น่าสนใจ</a></li>
-            <li class="scroll"><a href="#contact">การติดต่อ</a></li>       
+            <li class="scroll active">
+              <a href="#home">หน้าหลัก</a></li>
+            <li class="scroll">
+              <a href="#services">ข่าวประชาสัมพันธ์</a></li> 
+            <li class="scroll">
+              <a href="#about-us">เกี่ยวกับโรงเรียน</a></li>                     
+            <li class="scroll">
+              <a href="#portfolio">กิจกรรม</a></li>
+            <li class="scroll">
+              <a href="#team">บุคลากร</a></li>
+            <li class="scroll">
+              <a href="#blog">ลิงค์น่าสนใจ</a></li>
+            <li class="scroll">
+              <a href="#contact">การติดต่อ</a></li>       
           </ul>
         </div>
       </div>
@@ -178,7 +195,9 @@ $mysqli->close();
         <div class="row">
           <div class="text-center col-sm-8 col-sm-offset-2">
             <h2>Our Services</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
           </div>
         </div> 
       </div>
@@ -190,7 +209,9 @@ $mysqli->close();
             </div>
             <div class="service-info">
               <h3>Brand Identity</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore</p>
             </div>
           </div>
           <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="450ms">
@@ -199,7 +220,9 @@ $mysqli->close();
             </div>
             <div class="service-info">
               <h3>Creative Idea</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore</p>
             </div>
           </div>
           <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="550ms">
@@ -208,7 +231,9 @@ $mysqli->close();
             </div>
             <div class="service-info">
               <h3>Awesome Support</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore</p>
             </div>
           </div>
           <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="650ms">
@@ -217,7 +242,9 @@ $mysqli->close();
             </div>
             <div class="service-info">
               <h3>Professional Design</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore</p>
             </div>
           </div>
           <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="750ms">
@@ -226,7 +253,9 @@ $mysqli->close();
             </div>
             <div class="service-info">
               <h3>App Development</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore</p>
             </div>
           </div>
           <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="850ms">
@@ -235,7 +264,9 @@ $mysqli->close();
             </div>
             <div class="service-info">
               <h3>Clean Code</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore</p>
             </div>
           </div>
         </div>
@@ -248,8 +279,16 @@ $mysqli->close();
         <div class="col-sm-6">
           <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
             <h2>About us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+              quis nostrud exercitation.Ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+              Excepteur sint occaecat cupidatat non proident, 
+              sunt in culpa qui officia deserunt mollit anim id est laborum. 
+              Sed ut perspiciatis unde omnis iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
         <div class="col-sm-6">
@@ -257,25 +296,33 @@ $mysqli->close();
             <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
               <p class="lead">User Experiances</p>
               <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="95">95%</div>
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar" 
+                     aria-valuetransitiongoal="95">
+                  95%</div>
               </div>
             </div>
             <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="400ms">
               <p class="lead">Web Design</p>
               <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="75">75%</div>
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  
+                     aria-valuetransitiongoal="75">
+                  75%</div>
               </div>
             </div>
             <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
               <p class="lead">Programming</p>
               <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="60">60%</div>
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  
+                     aria-valuetransitiongoal="60">
+                  60%</div>
               </div>
             </div>
             <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
               <p class="lead">Fun</p>
               <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="85">85%</div>
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  
+                     aria-valuetransitiongoal="85">
+                  85%</div>
               </div>
             </div>
           </div>
@@ -287,9 +334,12 @@ $mysqli->close();
   <section id="portfolio">
     <div class="container">
       <div class="row">
-        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" 
+             data-wow-delay="300ms">
           <h2>Our Portfolio</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
         </div>
       </div> 
     </div>
@@ -308,8 +358,12 @@ $mysqli->close();
                     <p>Design, Photography</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.php" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="#" 
+                          data-single_url="portfolio-single.php" >
+                          <i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" 
+                          data-lightbox="portfolio">
+                          <i class="fa fa-search-plus"></i></a></span>
                   </div>
                 </div>
               </div>
@@ -329,8 +383,12 @@ $mysqli->close();
                     <p>Design, Photography</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.php" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="#" 
+                          data-single_url="portfolio-single.php" >
+                          <i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" 
+                          data-lightbox="portfolio">
+                          <i class="fa fa-search-plus"></i></a></span>
                   </div>
                 </div>
               </div>
@@ -350,8 +408,12 @@ $mysqli->close();
                     <p>Design, Photography</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.php" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="#" 
+                          data-single_url="portfolio-single.php" >
+                          <i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" 
+                          data-lightbox="portfolio">
+                          <i class="fa fa-search-plus"></i></a></span>
                   </div>
                 </div>
               </div>
@@ -371,8 +433,12 @@ $mysqli->close();
                     <p>Design, Photography</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.php" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="#" 
+                          data-single_url="portfolio-single.php" >
+                          <i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" 
+                          data-lightbox="portfolio">
+                          <i class="fa fa-search-plus"></i></a></span>
                   </div>
                 </div>
               </div>
@@ -392,8 +458,12 @@ $mysqli->close();
                     <p>Design, Photography</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.php" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="#" 
+                          data-single_url="portfolio-single.php" >
+                          <i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" 
+                          data-lightbox="portfolio">
+                          <i class="fa fa-search-plus"></i></a></span>
                   </div>
                 </div>
               </div>
@@ -413,8 +483,12 @@ $mysqli->close();
                     <p>Design, Photography</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.php" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="#" 
+                          data-single_url="portfolio-single.php" >
+                          <i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" 
+                          data-lightbox="portfolio">
+                          <i class="fa fa-search-plus"></i></a></span>
                   </div>
                 </div>
               </div>
@@ -434,8 +508,12 @@ $mysqli->close();
                     <p>Design, Photography</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.php" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                    <span class="folio-link">
+                      <a class="folio-read-more" href="#" data-single_url="portfolio-single.php" >
+                          <i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand">
+                      <a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio">
+                          <i class="fa fa-search-plus"></i></a></span>
                   </div>
                 </div>
               </div>
@@ -455,8 +533,12 @@ $mysqli->close();
                     <p>Design, Photography</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.php" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                    <span class="folio-link">
+                      <a class="folio-read-more" href="#" data-single_url="portfolio-single.php" >
+                        <i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand">
+                      <a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio">
+                        <i class="fa fa-search-plus"></i></a></span>
                   </div>
                 </div>
               </div>
@@ -474,9 +556,11 @@ $mysqli->close();
   <section id="team">
     <div class="container">
       <div class="row">
-        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" 
+              data-wow-duration="1200ms" data-wow-delay="300ms">
           <h2>The Team</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
         </div>
       </div>
       <div class="team-members">
@@ -600,9 +684,11 @@ $mysqli->close();
   <section id="pricing">
     <div class="container">
       <div class="row">
-        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" 
+             data-wow-duration="1200ms" data-wow-delay="300ms">
           <h2>Pricing Table</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
         </div>
       </div>
       <div class="pricing-table">
@@ -674,8 +760,10 @@ $mysqli->close();
 
   <section id="twitter" class="parallax">
     <div>
-      <a class="twitter-left-control" href="#twitter-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-      <a class="twitter-right-control" href="#twitter-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+      <a class="twitter-left-control" href="#twitter-carousel" role="button" data-slide="prev">
+        <i class="fa fa-angle-left"></i></a>
+      <a class="twitter-right-control" href="#twitter-carousel" role="button" data-slide="next">
+        <i class="fa fa-angle-right"></i></a>
       <div class="container">
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2">
@@ -686,13 +774,16 @@ $mysqli->close();
             <div id="twitter-carousel" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
                 <div class="item active wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <p>Introducing Shortcode generator for Helix V2 based templates <a href="#"><span>#helixframework #joomla</span> http://bit.ly/1qlgwav</a></p>
+                  <p>Introducing Shortcode generator for Helix V2 based templates 
+                    <a href="#"><span>#helixframework #joomla</span> http://bit.ly/1qlgwav</a></p>
                 </div>
                 <div class="item">
-                  <p>Introducing Shortcode generator for Helix V2 based templates <a href="#"><span>#helixframework #joomla</span> http://bit.ly/1qlgwav</a></p>
+                  <p>Introducing Shortcode generator for Helix V2 based templates 
+                    <a href="#"><span>#helixframework #joomla</span> http://bit.ly/1qlgwav</a></p>
                 </div>
                 <div class="item">                                
-                  <p>Introducing Shortcode generator for Helix V2 based templates <a href="#"><span>#helixframework #joomla</span> http://bit.ly/1qlgwav</a></p>
+                  <p>Introducing Shortcode generator for Helix V2 based templates 
+                    <a href="#"><span>#helixframework #joomla</span> http://bit.ly/1qlgwav</a></p>
                 </div>
               </div>                        
             </div>                    
@@ -705,9 +796,12 @@ $mysqli->close();
   <section id="blog">
     <div class="container">
       <div class="row">
-        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" 
+             data-wow-duration="1200ms" data-wow-delay="300ms">
           <h2>Blog Posts</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
         </div>
       </div>
       <div class="blog-posts">
@@ -729,7 +823,9 @@ $mysqli->close();
               <span class="cetagory">in <strong>Photography</strong></span>
             </div>
             <div class="entry-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div>
           </div>
           <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -751,8 +847,10 @@ $mysqli->close();
                     <a href="#"><img class="img-responsive" src="images/blog/3.jpg" alt=""></a>
                   </div>
                 </div>                               
-                <a class="blog-left-control" href="#post-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-                <a class="blog-right-control" href="#post-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+                <a class="blog-left-control" href="#post-carousel" role="button" data-slide="prev">
+                  <i class="fa fa-angle-left"></i></a>
+                <a class="blog-right-control" href="#post-carousel" role="button" data-slide="next">
+                  <i class="fa fa-angle-right"></i></a>
               </div>                            
               <div class="post-meta">
                 <span><i class="fa fa-comments-o"></i> 3 Comments</span>
@@ -768,7 +866,9 @@ $mysqli->close();
               <span class="cetagory">in <strong>Photography</strong></span>
             </div>
             <div class="entry-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div>
           </div>
           <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="800ms">
@@ -788,7 +888,9 @@ $mysqli->close();
               <span class="cetagory">in <strong>Photography</strong></span>
             </div>
             <div class="entry-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div>
           </div>                    
         </div>
@@ -800,13 +902,17 @@ $mysqli->close();
   </section><!--/#blog-->
 
   <section id="contact">
-    <div id="google-map" class="wow fadeIn" data-latitude="52.365629" data-longitude="4.871331" data-wow-duration="1000ms" data-wow-delay="400ms"></div>
+    <div id="google-map" class="wow fadeIn" data-latitude="52.365629" 
+         data-longitude="4.871331" data-wow-duration="1000ms" data-wow-delay="400ms"></div>
     <div id="contact-us" class="parallax">
       <div class="container">
         <div class="row">
-          <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+          <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" 
+               data-wow-duration="1000ms" data-wow-delay="300ms">
             <h2>Contact Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
           </div>
         </div>
         <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -821,7 +927,8 @@ $mysqli->close();
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <input type="email" name="email" class="form-control" placeholder="Email Address" required="required">
+                      <input type="email" name="email" class="form-control" 
+                             placeholder="Email Address" required="required">
                     </div>
                   </div>
                 </div>
@@ -829,7 +936,8 @@ $mysqli->close();
                   <input type="text" name="subject" class="form-control" placeholder="Subject" required="required">
                 </div>
                 <div class="form-group">
-                  <textarea name="message" id="message" class="form-control" rows="4" placeholder="Enter your message" required="required"></textarea>
+                  <textarea name="message" id="message" class="form-control" rows="4" 
+                            placeholder="Enter your message" required="required"></textarea>
                 </div>                        
                 <div class="form-group">
                   <button type="submit" class="btn-submit">Send Now</button>
@@ -838,12 +946,20 @@ $mysqli->close();
             </div>
             <div class="col-sm-6">
               <div class="contact-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Ut enim ad minim veniam, quis nostrud exercitation.</p>
                 <ul class="address">
-                  <li><i class="fa fa-map-marker"></i> <span> Address:</span> 2400 South Avenue A </li>
-                  <li><i class="fa fa-phone"></i> <span> Phone:</span> +928 336 2000  </li>
-                  <li><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:someone@yoursite.com"> support@oxygen.com</a></li>
-                  <li><i class="fa fa-globe"></i> <span> Website:</span> <a href="#">www.sitename.com</a></li>
+                  <li>
+                    <i class="fa fa-map-marker"></i> <span> Address:</span> 2400 South Avenue A </li>
+                  <li>
+                    <i class="fa fa-phone"></i> <span> Phone:</span> +928 336 2000  </li>
+                  <li>
+                    <i class="fa fa-envelope"></i> <span> 
+                      Email:</span><a href="mailto:someone@yoursite.com"> support@oxygen.com</a></li>
+                  <li>
+                    <i class="fa fa-globe"></i> <span> Website:</span> <a href="#">www.sitename.com</a></li>
                 </ul>
               </div>                            
             </div>
@@ -874,10 +990,15 @@ $mysqli->close();
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <p>&copy; 2017 โรงเรียนทุ่งกุลาประชานุสรณ์ สังกัดองค์การบริหารส่วนจังหวัดร้อยเอ็ด</p>
+            <p>
+              &copy; 2017 โรงเรียนทุ่งกุลาประชานุสรณ์ 
+              สังกัด
+              องค์การบริหารส่วนจังหวัดร้อยเอ็ด
+              </p>
           </div>
           <div class="col-sm-6">
-            <p class="pull-right">By <a href="https://www.facebook.com/bombomstory/" target="_blank">Paitoon Thipsanthia</a></p>
+            <p class="pull-right">
+              By <a href="https://www.facebook.com/bombomstory/" target="_blank">Paitoon Thipsanthia</a></p>
           </div>
         </div>
       </div>
